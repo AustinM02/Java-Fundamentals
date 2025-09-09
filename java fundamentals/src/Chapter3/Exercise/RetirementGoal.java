@@ -29,7 +29,29 @@ public class RetirementGoal {
             System.out.println("Invalid input. Please enter a positive number.");
         }
 
-        double totalSavings = noOfYears * annualSavings;
-        System.out.println("You will have saved " + totalSavings + " by retirement" );
+        //double totalSavings = noOfYears * annualSavings;
+        //System.out.println("You will have saved " + totalSavings + " by retirement" );
+
+        //double totalSavings=0;
+        double savings = annualSavings;
+
+        for(int i = 1; i <= noOfYears; i++){
+            System.out.print("Year " + i + " = " +  savings + "\n");
+            //totalSavings += annualSavings;
+            if(i !=5){
+                savings = savings + (savings * 0.10);
+            }
+
+
+        }
+
+        //System.out.println("Total savings : " + totalSavings);
+        System.out.println("\n\nRetirement Calculations:\n===============================\n" +
+                String.format("""
+                          Years: %d
+                          Amount you want to save per annual: R%.2f
+
+                          Total Retirement Money: R%.2f
+                          """, noOfYears, annualSavings, savings));
     }
 }
