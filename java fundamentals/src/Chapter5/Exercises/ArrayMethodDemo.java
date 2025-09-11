@@ -2,7 +2,7 @@ package Chapter5.Exercises;
 
 public class ArrayMethodDemo {
     public static void main(String[] args) {
-        int[] numbers = {12, 7, 25, 30, 5, 18, 40, 10};
+        int[] numbers = {5, 10, 20, 25, 30, 35, 40, 45};
 
         displayAll(numbers);
         displayReverse(numbers);
